@@ -12,44 +12,43 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout código
-      uses: actions/checkout@v4
+      - name: Checkout do código
+        uses: actions/checkout@v4
       
-    - name: Configurar Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        cache: 'npm'
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
     
-    - name: Instalar dependências
-      run: npm ci
+      - name: Instalar dependências
+        run: npm ci
     
-    - name: Verificar formatação com Biome
-      run: npx @biomejs/biome format --check .
+      - name: Verificar formatação com Biome
+        run: npx biome format --check .
     
-    - name: Executar linting com Biome
-      run: npx @biomejs/biome lint .
+      - name: Executar linting com Biome
+        run: npx biome lint .
     
-    - name: Verificar se código está organizado
-      run: npx @biomejs/biome check .
+      - name: Verificar se código está organizado
+        run: npx biome check .
 
-  # Opcional: job para testes (se você tiver)
   test:
     runs-on: ubuntu-latest
     needs: lint-and-format
     
     steps:
-    - name: Checkout código
-      uses: actions/checkout@v4
+      - name: Checkout do código
+        uses: actions/checkout@v4
       
-    - name: Configurar Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        cache: 'npm'
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
     
-    - name: Instalar dependências
-      run: npm ci
+      - name: Instalar dependências
+        run: npm ci
     
-    - name: Executar testes
-      run: npm test
+      - name: Executar testes
+        run: npm test
