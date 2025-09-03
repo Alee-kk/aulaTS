@@ -13,5 +13,5 @@ const a = {
 
 const b = a;
 
-a.nome = 'joão';
+a.nome = 'joão';asdasda,.,.
 console.log(b)
