@@ -1,6 +1,6 @@
 const pessoa = {
-  nome: 'Luiz',
-  sobrenome: 'Otávio'
+	nome: "Luiz",
+	sobrenome: "Otávio",
 };
 
 // For clássico - Geralmente com iteráveis (array ou strings)

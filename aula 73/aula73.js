@@ -12,8 +12,8 @@ Object.defineProperties (define várias propriedades)
 Object.defineProperty (define uma propriedade)
 */
 
-const produto = {nome: 'Caneca', preco: 1.8};
+const produto = { nome: "Caneca", preco: 1.8 };
 
 for (let valor of Object.entries(produto)) {
-    console.log(valor[0], valor[1]);
+	console.log(valor[0], valor[1]);
 }

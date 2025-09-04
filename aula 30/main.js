@@ -71,7 +71,7 @@
 //         case 11:
 //             nomeMes = 'Dezembro';
 //             return nomeMes;
-        
+
 //     };
 // };
 
@@ -85,14 +85,13 @@
 
 //     const dayName = getDiaSemanaTexto(diaSemana);
 //     const monthName = getNomeMes(numberMonth);
-    
+
 //     return (`${dayName},${data.getDate()} de ${monthName} de ${data.getFullYear()} ${zeroAesquerda(data.getHours())}:${zeroAesquerda(data.getMinutes())}`);
 // };
 
 // h1.innerHTML = createDate(data);
 
-const h1 = document.querySelector('.container h1');
+const h1 = document.querySelector(".container h1");
 const data = new Date();
 
-
-h1.innerHTML = data.toLocaleDateString('pt-BR', { dataStyle: 'full'});
+h1.innerHTML = data.toLocaleDateString("pt-BR", { dataStyle: "full" });

@@ -1,11 +1,11 @@
-const nome = 'Luiz';
+const nome = "Luiz";
 
 function falaNome() {
-  console.log(nome);
+	console.log(nome);
 }
 
 function usaFalaNome() {
-  const nome = 'Otávio';
-  falaNome();
+	const nome = "Otávio";
+	falaNome();
 }
 usaFalaNome();

@@ -6,12 +6,11 @@ Referências (mutável) - array, object, function - Passados por referência
 */
 
 const a = {
-    nome: ' ALberto',
-    sobrenome: 'da Silva',
-
+	nome: " ALberto",
+	sobrenome: "da Silva",
 };
 
 const b = a;
 
-a.nome = 'joão';
-console.log(b)
+a.nome = "joão";
+console.log(b);
