@@ -23,7 +23,7 @@ jobs:
         run: npm ci
     
       - name: Verificar formatação com Biome
-  run: npx biome check --formatter .
+        run: npx biome check --formatter .
 
     
       - name: Executar linting com Biome
