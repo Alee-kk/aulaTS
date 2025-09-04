@@ -1,19 +1,19 @@
 function mostraHora() {
-  let data = new Date();
+	let data = new Date();
 
-  return data.toLocaleTimeString('pt-BR', {
-    hour12: false
-  });
+	return data.toLocaleTimeString("pt-BR", {
+		hour12: false,
+	});
 }
 
-const timer = setInterval(function() {
-  console.log(mostraHora());
+const timer = setInterval(function () {
+	console.log(mostraHora());
 }, 1000);
 
-setTimeout(function() {
-  clearInterval(timer);
+setTimeout(function () {
+	clearInterval(timer);
 }, 3000);
 
-setTimeout(function() {
-  console.log('Olá mundo!');
+setTimeout(function () {
+	console.log("Olá mundo!");
 }, 5000);

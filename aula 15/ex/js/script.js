@@ -1,6 +1,6 @@
-const numero = Number(prompt('Digite um número:'));
-const numeroTitulo = document.getElementById('numero-titulo');
-const texto = document.getElementById('texto');
+const numero = Number(prompt("Digite um número:"));
+const numeroTitulo = document.getElementById("numero-titulo");
+const texto = document.getElementById("texto");
 /*
 Raiz quadrada:
 se é inteiro:
@@ -11,7 +11,7 @@ Com duas casas decimais:
 */
 numeroTitulo.innerHTML = numero;
 
-texto.innerHTML = '';
+texto.innerHTML = "";
 texto.innerHTML += `<p>Raiz quadrada do seu número é: ${numero ** 0.5}.</p>`;
 texto.innerHTML += `<p>${numero} é inteiro: ${Number.isInteger(numero)}.</p>`;
 texto.innerHTML += `<p>É NaN?: ${Number.isNaN(numero)}.</p>`;

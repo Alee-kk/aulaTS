@@ -6,7 +6,6 @@ const verdadeira = true;
 // let nome = 'Luiz'; // criando
 // var nome2 = 'Luiz'; // criando
 
-
 // if (verdadeira) {
 //   let nome = 'Otávio'; // criando
 //   var nome2 = 'Rogério'; // redeclarando
@@ -17,8 +16,7 @@ const verdadeira = true;
 //   }
 // }
 
-// console.log(nome, nome2);  
-
+// console.log(nome, nome2);
 
 // function falaOi () {
 
@@ -33,5 +31,5 @@ const verdadeira = true;
 
 // falaOi();
 
-let sobrenome = 'Miranda';
+let sobrenome = "Miranda";
 console.log(sobrenome);
