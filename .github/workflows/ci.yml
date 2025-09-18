@@ -1,31 +1,28 @@
-# .github/workflows/ci.yml
 name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [main]
   pull_request:
-    branches: [ "main" ]
+    branches: [main]
 
 jobs:
-  build-and-test:
+  lint:
+    name: Lint with Biome
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout código
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: 🔧 Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: "npm"
 
-      - name: 📦 Instalar dependências
-        run: npm install
+      - name: Install dependencies
+        run: npm ci
 
-      - name: 🛠️ Rodar build
-        run: npm run build --if-present
-
-      - name: ✅ Rodar testes
-        run: npm test
+      - name: Run Biome check
+        run: npx biome check . --error-on-warnings
